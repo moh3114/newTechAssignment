@@ -120,4 +120,27 @@ console.log(stringTrim(`NEWTECH`));
 
 //////////////////////////////////////////
 
+// EX5.2
+
+function stringRepeat(repeatCount, str){
+    newStr = ``
+    for (let i=0; i<repeatCount; i++)
+        newStr = newStr.concat(str)
+    return newStr;
+}
+
+console.log(stringRepeat(5, `hello`));
+
+//////////////////////////////////////////
+
+// EX5.5
+
+function abbreviateTwoWords(str){
+    return str.split(` `).map(word => word[0].toUpperCase()).join(`.`)
+}
+
+console.log(abbreviateTwoWords("muhammad bsoul"));
+
+//////////////////////////////////////////
+
 
