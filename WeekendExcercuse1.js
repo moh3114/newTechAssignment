@@ -133,6 +133,32 @@ console.log(stringRepeat(5, `hello`));
 
 //////////////////////////////////////////
 
+// EX5.3
+
+function toCamelCase(str){
+    let words = str.split(`-`).join().split(`_`).join().split(`,`);
+    let newStr = words.shift();    
+    words.forEach(word => newStr = newStr.concat(word[0].toUpperCase()+word.slice(1)))
+    return newStr
+}
+
+console.log(toCamelCase(`the-stealth-warrior`));
+
+//////////////////////////////////////////
+
+// EX5.4
+
+function toWeirdCase(str){
+    let newStr = ``
+    str.split(``).forEach((letter, i) => i%2 === 0 ? newStr = newStr.concat(letter.toUpperCase()) : newStr = newStr.concat(letter.toLowerCase()))
+    return newStr
+}
+
+console.log(toWeirdCase(`weird string case`));
+console.log(toWeirdCase(`String`));
+
+//////////////////////////////////////////
+
 // EX5.5
 
 function abbreviateTwoWords(str) {
@@ -235,5 +261,3 @@ function isogram(str) {
 console.log(isogram(`abABB`));
 
 //////////////////////////////////////////
-
-
