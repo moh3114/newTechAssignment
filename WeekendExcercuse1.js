@@ -94,3 +94,30 @@ console.log(basicOp(`+`, 2,6));
 
 //////////////////////////////////////////
 
+// EX3.1
+
+function nb_year(populationStart, increasePersent, fixNewInhabitants, targetPopulation){
+    let currentPopulation = populationStart
+    let years = 0
+    while(currentPopulation < targetPopulation){
+        currentPopulation += currentPopulation*increasePersent/100 + fixNewInhabitants
+        years++;
+    }
+    return years
+}
+
+console.log(nb_year(1000, 2, 50, 1200));
+
+//////////////////////////////////////////
+
+// EX5.1
+
+function stringTrim(str){
+    return str.slice(1, str.length-1)
+}
+
+console.log(stringTrim(`NEWTECH`));
+
+//////////////////////////////////////////
+
+
