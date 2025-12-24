@@ -195,10 +195,44 @@ function mumbling(str) {
         count++
         newStr = newStr.concat(`-`)
     })
-    return newStr.slice(0,newStr.length-1)
+    return newStr.slice(0, newStr.length - 1)
 }
 
 console.log(mumbling(`abcd`));
+
+//////////////////////////////////////////
+
+// EX6.3
+
+function organizeStrings(str1, str2) {
+    const s = str1.concat(str2)
+    const s2 = [];
+    s.split(``).forEach(letter => !s2.includes(letter) ? s2.push(letter) : 0)
+    return s2.sort().join(``);
+}
+
+console.log(organizeStrings(`xyaabbbcccccdefww`, `xxxxyyyyabklmopq`));
+console.log(organizeStrings(`abc`, `abc`));
+
+//////////////////////////////////////////
+
+// EX6.4
+
+function isogram(str) {
+    const lowerCaseStr = str.toLowerCase();
+    let newStr = ``
+    for (let letter of lowerCaseStr){
+        if (!newStr.includes(letter)){
+            newStr = newStr.concat(letter);
+        }
+        else{
+            return false
+        }
+    }
+    return true;
+}
+
+console.log(isogram(`abABB`));
 
 //////////////////////////////////////////
 
