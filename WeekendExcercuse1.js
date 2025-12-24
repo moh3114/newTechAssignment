@@ -143,4 +143,29 @@ console.log(abbreviateTwoWords("muhammad bsoul"));
 
 //////////////////////////////////////////
 
+// EX5.6
 
+function mask(str){
+    let newStr = ``;
+    for(let i=0; i<str.length-4; i++) {
+        newStr = newStr.concat(`#`);
+    }
+    return newStr.concat(str.slice(str.length-4,str.length))
+}
+
+console.log(mask(`nananannananananananaan!!!!`));
+
+//////////////////////////////////////////
+
+// EX5.7
+
+function shortestWordLength(str){
+    const words = str.split(` `);
+    let shortLength = words[0].length
+    words.forEach(word => shortLength = word.length < shortLength ? word.length : shortLength)
+    return shortLength
+}
+
+console.log(shortestWordLength(`My name is muhammad`));
+
+//////////////////////////////////////////
